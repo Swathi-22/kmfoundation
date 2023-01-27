@@ -1,0 +1,23 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row container pt-50">
+
+   {% for international in international %}  
+    <div class="col-lg-3 col-6">
+        <div class="featured-item-two">
+            <a href="{% url 'web:course-list' international.id %}">
+                <i class="fa fa-thin fa-location-dot"></i>
+                <h3>{{ international.state }}</h3>
+            </a>
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+
+
+
+
+{% endblock %}
